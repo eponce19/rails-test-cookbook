@@ -1,5 +1,7 @@
 # Run an update on the box.
-execute "sudo yum install mysql-devel" do
+execute "setup unicorn" do
+    Chef::Log.info("Install nodejs and start unicorn")
     command "sudo yum install mysql-devel"
-    command "echo 1234 "
+    command "sudo yum -y install nodejs"
+    command "sudo /srv/www/unicorn_sample/shared/scripts/unicorn start"
 end
