@@ -1,12 +1,12 @@
-# Recipe used for a setup and deploy events
-Chef::Log.info("Install nodejs")
-# command "sudo yum -y install nodejs"
-# node.default['nodejs']['install_method'] = 'binary'
-# node.default['nodejs']['version'] = '5.10.0'
-# node.default['nodejs']['binary']['checksum']['linux_x64'] = '...'
-# include_recipe 'nodejs'
-node['nodejs']['install_method'] = 'package' # Not necessary because it's the default
-include_recipe "nodejs"
+# # Recipe used for a setup and deploy events
+# Chef::Log.info("Install nodejs")
+# # command "sudo yum -y install nodejs"
+# # node.default['nodejs']['install_method'] = 'binary'
+# # node.default['nodejs']['version'] = '5.10.0'
+# # node.default['nodejs']['binary']['checksum']['linux_x64'] = '...'
+# # include_recipe 'nodejs'
+# node['nodejs']['install_method'] = 'package' # Not necessary because it's the default
+# include_recipe "nodejs"
 
 Chef::Log.info("Create config/application.yml file...")
 
