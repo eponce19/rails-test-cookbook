@@ -4,8 +4,8 @@
 #   env (hash of custom environment settings)
 
 define :custom_env_template do
-    application = params[:app]    
-    deploy = params[:deploy_data]
+    application = params[:application]    
+    deploy = params[:deploy]
 
     template "#{params[:deploy][:deploy_to]}/shared/config/application.yml" do
       source "application.yml.erb"
