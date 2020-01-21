@@ -18,4 +18,5 @@ node[:deploy].each do |application, deploy|
     deploy deploy
     env environment_variables
   end
+
 end

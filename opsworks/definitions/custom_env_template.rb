@@ -26,4 +26,15 @@ define :custom_env_template do
         File.exists?("#{params[:deploy][:deploy_to]}/current/config")
       end
     end
+
+    template "/etc/logrotate.d/opsworks_app_#{application}" do
+      backup false
+      source "logrotate.erb"
+      cookbook 'deploy'
+      owner "root" 
+      group "root"
+      mode 0644
+      variables( :log_dirs => ["#{deploy[:deploy_to]}/shared/log" ] )
+    end
+
 end
