@@ -37,7 +37,7 @@ define :custom_env_template do
       owner "root" 
       group "root"
       mode 0644
-      variables( :log_dirs => ["#{deploy[:deploy_to]}/shared/log" ] )
+      variables( :log_dirs => ["#{params[:deploy][:deploy_to]}/shared/log" ] )
     end
 
 end
